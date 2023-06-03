@@ -1,0 +1,144 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    }
+    
+    header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2196f3;
+    /* The blue color you provided */
+    color: white;
+    height: 100vh;
+    }
+    
+    header img {
+    width: 150px;
+    /* adjust as needed /
+    height: auto;
+    / keeps the aspect ratio */
+    }
+    
+    h1 {
+    font-size: 3em;
+    }
+    
+    h2 {
+    font-size: 2em;
+    margin: 1em 0;
+    }
+    
+    nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 20px 0;
+    background-color: #ffffff;
+    }
+    
+    nav ul a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    }
+    
+    nav ul a:hover {
+    color: #1e88e5;
+    /* Darker blue color on hover */
+    }
+    
+    section {
+    margin: 50px 20px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+    }
+    
+    section a {
+    color: #2196f3;
+    /* The blue color for the project links */
+    transition: color 0.3s ease;
+    }
+    
+    section a:hover {
+    color: #1e88e5;
+    /* Darker blue color on hover */
+    }
+    
+    ul ul {
+    margin-bottom: 10px;
+    /* adjust this value to increase or decrease space */
+    }
+    
+    input,
+    textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    }
+    
+    button {
+    padding: 10px;
+    color: white;
+    background-color: #2196f3;
+    /* The blue color you provided */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+    background-color: #1e88e5;
+    /* A slightly darker blue for hover effect */
+    }
+    
+    /* Additional Complimentary Colors */
+    
+    .primary {
+    color: #f3b700;
+    /* Complimentary color 1 */
+    }
+    
+    .secondary {
+    color: #00695c;
+    /* Complimentary color 2 */
+    }
+    
+    .background-accent {
+    background-color: #ff4081;
+    /* Complimentary color 3 */
+    }
+    
+    .hover-accent {
+    color: #e91e63;
+    /* Complimentary color 4 */
+    }
+    
+    @media only screen and (max-width: 600px) {
+    nav ul {
+    flex-direction: column;
+    }
+    
+    h1 {
+    font-size: 2em;
+    }
+    
+    h2 {
+    font-size: 1.5em;
+    }
+    
+    nav ul a {
+    font-size: 1em;
+    }
+    }
