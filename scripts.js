@@ -1,5 +1,19 @@
 // main.js
-document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    alert('Your message has been sent!');
+// Smooth scrolling effect
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Add event listener for the links in the Contact section
+document.querySelectorAll('#contact ul li a').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        alert('You clicked a contact link!');
+    });
 });

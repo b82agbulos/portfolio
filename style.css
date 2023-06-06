@@ -5,148 +5,166 @@ body {
     margin: 0;
     background-color: #f9f9f9;
     color: #333;
-    }
-    
-    header {
+}
+
+header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #2196f3;
-    /* The blue color you provided */
+    background-color: #0d2356; /* Chase dark blue color */
     color: white;
     height: 100vh;
-    }
-    
-    header img {
-    width: 150px;
-    /* adjust as needed /
-    height: auto;
-    / keeps the aspect ratio */
-    }
+}
 
-    #profile-pic {
-        border-radius: 50%;
-        width: 150px;
-        height: 150px;
-        object-fit: cover; /* Ensures the image covers the full width/height of the container without distorting */
-        margin-bottom: 20px;
-    }
-    
-    h1 {
+header img {
+    width: 150px;
+    height: auto;
+}
+
+#profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+h1 {
     font-size: 3em;
-    }
-    
-    h2 {
+}
+
+h2 {
     font-size: 2em;
     margin: 1em 0;
-    }
-    
-    nav ul {
+}
+
+nav ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
     padding: 20px 0;
-    background-color: #ffffff;
-    }
-    
-    nav ul a {
+    background-color: #0074d9; /* Chase light blue color */
+}
+
+nav ul a {
     text-decoration: none;
-    color: #333;
+    color: white;
     font-size: 1.2em;
-    }
-    
-    nav ul a:hover {
-    color: #1e88e5;
-    /* Darker blue color on hover */
-    }
-    
-    section {
+}
+
+nav ul a:hover {
+    color: #f9f9f9;
+}
+
+section {
     margin: 50px 20px;
     background: white;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
-    }
-    
-    section a {
-    color: #2196f3;
-    /* The blue color for the project links */
+}
+
+section a {
+    color: #0074d9; /* Chase blue color */
     transition: color 0.3s ease;
-    }
-    
-    section a:hover {
-    color: #1e88e5;
-    /* Darker blue color on hover */
-    }
-    
-    ul ul {
-    margin-bottom: 10px;
-    /* adjust this value to increase or decrease space */
-    }
-    
-    input,
-    textarea {
+}
+
+section a:hover {
+    color: #0d2356; /* Chase dark blue color */
+}
+
+input, textarea {
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
     font-size: 1em;
-    }
-    
-    button {
+}
+
+button {
     padding: 10px;
     color: white;
-    background-color: #2196f3;
-    /* The blue color you provided */
+    background-color: #0074d9; /* Chase blue color */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0d2356; /* Chase dark blue color */
+}
+.skills-icons {
+    justify-content: space-around;
+}
+
+.skills-icons ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.skills-icons li {
+    position: relative;
+    margin: 0 10px; /* Adjust the margin as needed */
+
+}
+
+.skills-icons img {
+    height: 50px; /* adjust this to change the height of the icons */
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.skills-icons li:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+@media only screen and (max-width: 600px) {
+        .skills-icons ul {
+        flex-wrap: wrap;
+        justify-content: flex-start;
     }
-    
-    button:hover {
-    background-color: #1e88e5;
-    /* A slightly darker blue for hover effect */
+
+    .skills-icons li {
+        margin: 10px 5px; /* Adjust the margin as needed for smaller screens */
     }
-    
-    /* Additional Complimentary Colors */
-    
-    .primary {
-    color: #f3b700;
-    /* Complimentary color 1 */
-    }
-    
-    .secondary {
-    color: #00695c;
-    /* Complimentary color 2 */
-    }
-    
-    .background-accent {
-    background-color: #ff4081;
-    /* Complimentary color 3 */
-    }
-    
-    .hover-accent {
-    color: #e91e63;
-    /* Complimentary color 4 */
-    }
-    
-    @media only screen and (max-width: 600px) {
     nav ul {
-    flex-direction: column;
+        flex-direction: column;
     }
-    
+
     h1 {
-    font-size: 2em;
+        font-size: 2em;
     }
-    
+
     h2 {
-    font-size: 1.5em;
+        font-size: 1.5em;
     }
-    
+
     nav ul a {
-    font-size: 1em;
+        font-size: 1em;
     }
-    }
+}
