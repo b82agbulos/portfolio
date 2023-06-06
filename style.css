@@ -24,6 +24,14 @@ body {
     height: auto;
     / keeps the aspect ratio */
     }
+
+    #profile-pic {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover; /* Ensures the image covers the full width/height of the container without distorting */
+        margin-bottom: 20px;
+    }
     
     h1 {
     font-size: 3em;
