@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family: 'Futura', 'Alegreya Sans', 'handglove', "Roboto Mono", monospace, "Exo 2", 'Arial', sans-serif;
+    font-family:  'Alegreya Sans', 'handglove', "Roboto Mono", monospace, "Exo 2", 'Arial', sans-serif;
     margin: 0;
     background-color: #f9f9f9;
     color: #333;
@@ -245,6 +245,8 @@ footer ul {
     padding: 0;
 }
 
+
+  
 @media screen and (max-width: 1475px) {
     #profile-pic {
         opacity: 0.5;

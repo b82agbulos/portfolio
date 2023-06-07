@@ -22,23 +22,21 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     nav.classList.toggle('scrolled', window.scrollY > 0);
   });
   
+// Function to capitalize the first letter of each word in a string
+function titleCase(str) {
+    return str.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
+
 // Function to fetch and display the last song played from Last.fm API
 function fetchLastSong() {
     const apiKey = 'efb001211a1a43834081d3889119e0b9'; // Replace with your Last.fm API key
-    const sharedSecret = 'befcd32168535ff2ec7d991b363b2967'; // Replace with your Last.fm shared secret
     const username = 'bagbulos82'; // Replace with your Last.fm username
   
     // Last.fm API endpoint to get recent tracks for a user
     const apiUrl = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&format=json&limit=1`;
   
-    // Generate the API signature
-    const apiSig = md5(`api_key${apiKey}methoduser.getrecenttracksusername${username}${sharedSecret}`);
-  
-    // Append the API signature to the API URL
-    const apiUrlWithSig = `${apiUrl}&api_sig=${apiSig}`;
-  
     // Make a GET request to the Last.fm API using fetch()
-    fetch(apiUrlWithSig)
+    fetch(apiUrl)
       .then(response => {
         if (!response.ok) {
           throw new Error('Error fetching last song:', response.status);
@@ -53,11 +51,22 @@ function fetchLastSong() {
         // Create HTML elements to display the last song played
         const songInfo = document.createElement('div');
         songInfo.classList.add('song-info');
-        const songName = document.createElement('p');
-        songName.textContent = lastSong.name;
-        const artistName = document.createElement('p');
-        artistName.textContent = lastSong.artist['#text'];
-        songInfo.append(songName, artistName);
+
+        const title = document.createElement('span');
+        title.textContent = "Title: ";
+        const songName = document.createElement('span');
+        songName.textContent = titleCase(lastSong.name);
+        title.append(songName);
+
+        const breakLine = document.createElement('br');
+
+        const artistLabel = document.createElement('span');
+        artistLabel.textContent = "Artist: ";
+        const artistName = document.createElement('span');
+        artistName.textContent = titleCase(lastSong.artist['#text']);
+        artistLabel.append(artistName);
+
+        songInfo.append(title, breakLine, artistLabel);
   
         // Append the song info to the container
         lastSongContainer.appendChild(songInfo);
@@ -65,8 +74,12 @@ function fetchLastSong() {
       .catch(error => {
         console.error('Error fetching last song:', error);
       });
-  }
-  
-  // Call the fetchLastSong function to retrieve and display the last song played
-  fetchLastSong();
+}
+
+// Call the fetchLastSong function to retrieve and display the last song played
+fetchLastSong();
+
+
+
+
   
