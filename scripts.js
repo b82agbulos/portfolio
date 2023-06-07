@@ -17,3 +17,9 @@ document.querySelectorAll('#contact ul li a').forEach(link => {
         alert('You clicked a contact link!');
     });
 });
+
+
+window.addEventListener('scroll', function() {
+    var nav = document.querySelector('nav');
+    nav.classList.toggle('scrolled', window.scrollY > 0);
+});

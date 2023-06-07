@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bobby Agbulos | Web Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+    window.addEventListener('scroll', function() {
+        var nav = document.querySelector('nav');
+        nav.classList.toggle('scrolled', window.scrollY > 0);
+    });
+    </script>
 <body>
     <header>
-        <img id="profile-pic" src="images/me-2.jpg" alt="Bobby Agbulos"> 
-        <h1>Bobby Agbulos</h1>
-        <h2>Web Developer</h2>
+        <div class="header-text">
+            <p>Hi, my name is</p>
+            <h1>Bobby Agbulos</h1>
+            <h3>Web Developer in Houston</h3> 
+        </div>
+        <img id="profile-pic" src="images/header.png" alt="Bobby Agbulos"> 
     </header>
 
     <nav>

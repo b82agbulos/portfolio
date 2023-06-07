@@ -1,33 +1,54 @@
 /* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Roboto Mono", monospace, "Exo 2", 'Arial', sans-serif;
     margin: 0;
     background-color: #f9f9f9;
     color: #333;
 }
 
 header {
+    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    flex-direction: column;
-    background-color: #0d2356; /* Chase dark blue color */
+    background-color: #0d2356;
     color: white;
-    height: 100vh;
-}
-
-header img {
-    width: 150px;
-    height: auto;
+    height: 85vh;
 }
 
 #profile-pic {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    margin-bottom: 20px;
+}
+
+.header-text {
+    width: 66.67%;
+    text-align: left;
+    margin-right: 500px; /* adjust this value as needed */
+}
+
+header p, h1, header h3 {
+    margin-left: 66.67%;  /* This pushes the heading to start from 2/3rds of the container's width */
+    text-align: left;  
+    z-index: 1;  /* Make it appear above the image */
+    position: relative; /* Required to make z-index work */
+    margin-bottom: 10px; /* adjust this value as needed */
+}
+header img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
+    transition: opacity 500ms ease 0s;
 }
 
 h1 {
@@ -38,13 +59,37 @@ h2 {
     font-size: 2em;
     margin: 1em 0;
 }
+h1, h2 {
+    font-family: "Exo 2", sans-serif;
+    text-transform: uppercase;
+}
+nav {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 999;  
+        background-color: #0d2356;
+}
+nav.scrolled {
+    background-color: #0074d9; /* The original color */
+}
+
+nav ul.scrolled {
+    background-color: #0074d9; /* The original color */
+}
 
 nav ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     list-style: none;
-    padding: 20px 0;
-    background-color: #0074d9; /* Chase light blue color */
+    padding: 10px 0;
+}
+nav ul li {
+    margin-left: 20px; /* Adjust as necessary for your preferred spacing */
+}
+
+nav ul li:last-child {
+    margin-right: 20px; /* Adjust as necessary for your preferred spacing */
 }
 
 nav ul a {
