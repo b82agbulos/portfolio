@@ -138,6 +138,7 @@ input, textarea {
     background: none;
     border: none;
     box-shadow: none;
+    margin-bottom: 5px;
 }
 
 #about {
@@ -209,6 +210,7 @@ button:hover {
 }
 
 #portfolio {
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
