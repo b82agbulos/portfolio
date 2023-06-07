@@ -19,7 +19,16 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
   
   window.addEventListener('scroll', function() {
     var nav = document.querySelector('nav');
-    nav.classList.toggle('scrolled', window.scrollY > 0);
+    var scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    var opacity = scrollPercentage / 37;
+  
+    // Calculate RGB values for the new color
+    var red = 0;
+    var green = 116;
+    var blue = 217;
+  
+    // Set the background color of the navigation bar with the new opacity
+    nav.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${opacity})`;
   });
   
 // Function to capitalize the first letter of each word in a string
