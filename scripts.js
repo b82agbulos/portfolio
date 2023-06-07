@@ -78,7 +78,14 @@ function fetchLastSong() {
         albumImage.src = lastSong.image[2]['#text']; // Assumes medium-sized image is available, change the index as needed
         albumImage.alt = "Album Art";
   
-        songInfo.append(title, titleBreak, artistLabel, breakLine, albumLabel, albumImage);
+        const playButton = document.createElement('button');
+        playButton.textContent = "Play";
+        playButton.addEventListener('click', () => {
+          // Open a new tab or window to play the song using your preferred music player or service
+          window.open(lastSong.url, '_blank');
+        });
+  
+        songInfo.append(title, titleBreak, artistLabel, breakLine, albumLabel, albumImage, playButton);
   
         // Append the song info to the container
         lastSongContainer.appendChild(songInfo);
