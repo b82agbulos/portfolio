@@ -241,6 +241,10 @@ button:hover {
     margin-bottom: 10px;
 }
 
+.hover-img:hover {
+    transform: scale(1.1);
+}
+
 footer ul {
     display: flex;
     justify-content: center;
