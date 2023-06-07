@@ -135,6 +135,9 @@ input, textarea {
     margin: 0;
     padding: 0;
     display: flex;
+    background: none;
+    border: none;
+    box-shadow: none;
 }
 
 #about {
@@ -240,48 +243,29 @@ footer ul {
     padding: 0;
 }
 
-@media only screen and (max-width: 600px) {
-    .skills-icons ul {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-
-    .skills-icons li {
-        margin: 10px 5px;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    nav ul a {
-        font-size: 1em;
-    }
-
-    .header-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-        color: white;
-    }
-
+@media screen and (max-width: 1475px) {
     #profile-pic {
-        z-index: 1;
+        opacity: 0.5;
     }
 
-    #contact p {
-        text-indent: 20px;
-    }
-
+  
     
 }
+@media screen and (max-width: 660px) {
+    .header-text {
+        text-align: center;
+        width: 100%; /* ensure the container takes full width */
+        margin: 0; /* remove any margin that might be pushing it off the screen */
+        padding: 20px; /* add some padding around the text */
+
+    }  
+    .header-text p, .header-text h1, .header-text h3 {
+        margin: 0; /* reset the margin */
+        padding: 10px 0; /* add some vertical padding */
+        line-height: 1.4; /* adjust line-height as necessary */
+    }
+        #profile-pic {
+            display: none; /* hides the header image */
+        }
+       
+        }
