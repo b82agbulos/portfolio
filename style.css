@@ -60,6 +60,11 @@ header img {
     transition: opacity 500ms ease 0s;
 }
 
+#after-header{
+    background: none; /* Remove the background */
+    border: none; /* Remove the border */
+    box-shadow: none; /* Remove the box shadow */
+}
 h1 {
     font-size: 3em;
 }
@@ -137,8 +142,12 @@ input, textarea {
 }
 
 #about-skills-container {
+    margin: 0;
+    padding: 0;
     display: flex;
-
+    background: none; /* Remove the background */
+    border: none; /* Remove the border */
+    box-shadow: none; /* Remove the box shadow */
   }
 
 #about {
@@ -150,6 +159,8 @@ input, textarea {
  #skills {
     width: 20%; /* Adjust the width as needed */
     margin-left: 20px;
+    border: none; /* Remove the border */
+
   }
 
 button {
