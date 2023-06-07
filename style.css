@@ -17,6 +17,8 @@ header {
     background-color: #0d2356;
     color: white;
     height: 85vh;
+    position: relative; /* Add position relative */
+    overflow: hidden; /* Add overflow hidden to hide any overflow */
 }
 
 #profile-pic {
@@ -180,6 +182,26 @@ button:hover {
 .skills-icons li:hover .tooltip {
     opacity: 1;
     visibility: visible;
+}
+
+section#portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 footer ul {
     display: flex;
