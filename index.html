@@ -4,16 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bobby Agbulos | Web Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<script>
-    window.addEventListener('scroll', function() {
-        var nav = document.querySelector('nav');
-        nav.classList.toggle('scrolled', window.scrollY > 0);
-    });
-    </script>
 <body>
     <header>
         <div class="header-text">
@@ -34,7 +27,7 @@
     </nav>
 
     <section id="about">
-        <h2>About Me</h2>
+        <h2>Unleashing the Coder Within</h2>
         <p>Passionate and dedicated Web Developer specializing in financial technology, I bring creativity and problem-solving skills to tackle complex challenges. With a solid foundation in mathematics and science, I leverage my coding skills to design and implement innovative technology solutions.</p>
     
         <p>My role as a Business Online Technology Support Specialist equipped me with strong communication skills and insights into business needs. I took the initiative to improve team communication and motivation, resulting in a significant boost in team performance and operational efficiency.</p>
@@ -43,7 +36,7 @@
     </section>
 
     <section id="skills">
-        <h2>Skills</h2>
+        <h2>Tech Wizardry</h2>
         <div class="skills-icons">
             <ul>
                 <li>
@@ -67,42 +60,53 @@
     </section>
 
     <section id="portfolio">
-        <h2>Portfolio</h2>
+        <h2>Digital Masterpieces</h2>
         <div class="project-container">
+            <div class="project">
+                <a href="https://b82agbulos.github.io/chrono-conquest/" target="_blank">
+                    <img src="images/chrono-conquest.png" alt="Chrono Conquest">
+                 </a>
+                <p>"Chrono Conquest: A Journey Through Time" is an immersive web-based Simon Says game where users embark on an engaging journey through time. The project showcases an exciting user interface with appealing colors and engaging visual effects. Players navigate through the game using game control buttons and are able to select their skill level, providing an individualized gaming experience. The project exhibits an innovative use of JavaScript to handle game mechanics, making the game interactive and dynamic. The clean design and smooth functionality of the game ensure a delightful user experience.</p>
+            </div>
 
-        <div class="project">
-            <a href="https://b82agbulos.github.io/chrono-conquest/" target="_blank">
-                <img src="images/chrono-conquest.png" alt="Chrono Conquest">
-             </a>
-            <p>"Chrono Conquest: A Journey Through Time" is an immersive web-based Simon Says game where users embark on an engaging journey through time. The project showcases an exciting user interface with appealing colors and engaging visual effects. Players navigate through the game using game control buttons and are able to select their skill level, providing an individualized gaming experience. The project exhibits an innovative use of JavaScript to handle game mechanics, making the game interactive and dynamic. The clean design and smooth functionality of the game ensure a delightful user experience.</p>
-        </div>
-
-        <div class="project">
-            <a href="https://b82agbulos.github.io/melodic-mosaic/" target="_blank">
-                <img src="images/melodic-mosaic.png" alt="Melodic Mosaic">
+            <div class="project">
+                <a href="https://b82agbulos.github.io/melodic-mosaic/" target="_blank">
+                    <img src="images/melodic-mosaic.png" alt="Melodic Mosaic">
                 </a>
-            <p>"Melodic Mosaic" is a dynamic web application for music lovers, curating an extensive collection of impactful albums across genres and eras. Its user-friendly interface facilitates easy exploration, featuring intuitive sorting, searching, and insightful album metadata. Emphasizing visual representation through album cover art, "Melodic Mosaic" offers a streamlined and interactive journey through the world of music.</p>
-     
-    </div>
+                <p>"Melodic Mosaic" is a dynamic web application for music lovers, curating an extensive collection of impactful albums across genres and eras. Its user-friendly interface facilitates easy exploration, featuring intuitive sorting, searching, and insightful album metadata. Emphasizing visual representation through album cover art, "Melodic Mosaic" offers a streamlined and interactive journey through the world of music.</p>
+            </div>
 
-        <div class="project">
-            <a href="https://b82agbulos.github.io/ninas-menu/" target="_blank">
-                <img src="images/ninas-menu.png" alt="Nina's Menu">
-            </a>
-            <p>"Nina's Menu" is a comprehensive website for a Filipino restaurant, specializing in homemade Lumpia and other delightful Filipino dishes. The site incorporates a welcoming homepage, a detailed menu section featuring the restaurant's offerings, an engaging about page recounting the establishment's story, an easy-to-navigate ordering system, and comprehensive catering and contact sections. The project is adorned with a modern design and clean user interface, ensuring an excellent user experience. The website's aesthetic appeal is complemented by the use of Google Fonts such as Roboto and Pacifico, giving it a unique and modern touch.</p>
+            <div class="project">
+                <a href="https://b82agbulos.github.io/ninas-menu/" target="_blank">
+                    <img src="images/ninas-menu.png" alt="Nina's Menu">
+                </a>
+                <p>"Nina's Menu" is a comprehensive website for a Filipino restaurant, specializing in homemade Lumpia and other delightful Filipino dishes. The site incorporates a welcoming homepage, a detailed menu section featuring the restaurant's offerings, an engaging about page recounting the establishment's story, an easy-to-navigate ordering system, and comprehensive catering and contact sections. The project is adorned with a modern design and clean user interface, ensuring an excellent user experience. The website's aesthetic appeal is complemented by the use of Google Fonts such as Roboto and Pacifico, giving it a unique and modern touch.</p>
+            </div>
         </div>
-    </div>
     </section>
     
+    <section id="contact">
+        <h2>Let's Build Together</h2>
+        <p>b82agbulos@gmail.com | 612-598-0943</p>
+    </section>
+
+    <!-- <section id="last-song">
+        <div class="container">
+            <h2>Last Song Played</h2>
+            <div id="last-song-container"></div>
+        </div>
+    </section> -->
     
 
-    <section id="contact">
-        <h2>Let's create</h2>
-                <p>b82agbulos@gmail.com | 612-598-0943</p>
-    </section>
-    <script src="main.js"></script>
+    <footer>
+        <ul>
+            <li><a href="attributes.html">Attributes</a></li>
+        </ul>
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="md5.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
-<footer>
-    <ul><a href="attributes.html">Attributes</a></li></ul>
-</footer>

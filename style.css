@@ -242,4 +242,16 @@ footer ul {
     nav ul a {
         font-size: 1em;
     }
+    @media screen and (max-width: 1553px) {
+        .header-text {
+          position: relative;
+          z-index: 2;
+          color: white; /* Optional: Change text color for better visibility */
+        }
+      
+        #profile-pic {
+          position: relative;
+          z-index: 1;
+        }
+      }
 }
