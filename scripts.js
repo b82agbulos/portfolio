@@ -25,8 +25,8 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
 // Function to capitalize the first letter of each word in a string
 function titleCase(str) {
     return str.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-}
-
+  }
+  
 // Function to fetch and display the last song played from Last.fm API
 function fetchLastSong() {
     const apiKey = 'efb001211a1a43834081d3889119e0b9'; // Replace with your Last.fm API key
@@ -51,22 +51,34 @@ function fetchLastSong() {
         // Create HTML elements to display the last song played
         const songInfo = document.createElement('div');
         songInfo.classList.add('song-info');
-
+  
         const title = document.createElement('span');
         title.textContent = "Title: ";
         const songName = document.createElement('span');
         songName.textContent = titleCase(lastSong.name);
         title.append(songName);
-
-        const breakLine = document.createElement('br');
-
+  
+        const titleBreak = document.createElement('br');
+  
         const artistLabel = document.createElement('span');
         artistLabel.textContent = "Artist: ";
         const artistName = document.createElement('span');
         artistName.textContent = titleCase(lastSong.artist['#text']);
         artistLabel.append(artistName);
-
-        songInfo.append(title, breakLine, artistLabel);
+  
+        const breakLine = document.createElement('br');
+  
+        const albumLabel = document.createElement('span');
+        albumLabel.textContent = "Album: ";
+        const albumName = document.createElement('span');
+        albumName.textContent = titleCase(lastSong.album['#text']);
+        albumLabel.append(albumName);
+  
+        const albumImage = document.createElement('img');
+        albumImage.src = lastSong.image[2]['#text']; // Assumes medium-sized image is available, change the index as needed
+        albumImage.alt = "Album Art";
+  
+        songInfo.append(title, titleBreak, artistLabel, breakLine, albumLabel, albumImage);
   
         // Append the song info to the container
         lastSongContainer.appendChild(songInfo);
@@ -74,12 +86,8 @@ function fetchLastSong() {
       .catch(error => {
         console.error('Error fetching last song:', error);
       });
-}
-
-// Call the fetchLastSong function to retrieve and display the last song played
-fetchLastSong();
-
-
-
-
+  }
+  
+  // Call the fetchLastSong function to retrieve and display the last song played
+  fetchLastSong();
   

@@ -245,14 +245,17 @@ footer ul {
     padding: 0;
 }
 
-
+.song-info img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+  }
   
 @media screen and (max-width: 1475px) {
     #profile-pic {
         opacity: 0.5;
     }
-
-  
     
 }
 @media screen and (max-width: 660px) {
