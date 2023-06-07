@@ -149,7 +149,11 @@ input, textarea {
 #skills {
     width: 20%;
     margin-left: 20px;
-    border: none;
+    border: none;  
+}
+
+#contact p {
+    text-indent: 20px; /* Adjust the indentation value as needed */
 }
 
 button {
@@ -245,14 +249,25 @@ footer ul {
     padding: 0;
 }
 
+.song-info span:not(:last-child) {
+    display: inline-block;
+    margin-left: 20px;
+  }
 .song-info img {
     display: block;
     width: 100px;
     height: 100px;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 20px;
   }
   
+  .song-info button {
+    display: block;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
 @media screen and (max-width: 1475px) {
     #profile-pic {
         opacity: 0.5;
