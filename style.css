@@ -4,7 +4,6 @@
 body {
     font-family: "Roboto Mono", monospace, "Exo 2", 'Arial', sans-serif;
     margin: 0;
-    padding: 20px; /* adjust this as necessary */
     background-color: #f9f9f9;
     color: #333;
     box-sizing: border-box;
@@ -184,18 +183,26 @@ button:hover {
     visibility: visible;
 }
 
-section#portfolio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+#portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .project-container {
+    display: flex;
     gap: 20px;
-}
-
-.project {
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+  
+  .project {
+    flex: 1 0 300px; /* Set a fixed width for each project */
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
-}
+  }
+
 
 .project img {
     width: 100%;
