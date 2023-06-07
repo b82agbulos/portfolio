@@ -1,8 +1,15 @@
 /* styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
-
+@font-face {
+    font-family: 'Handglove';
+    src: url('fonts/handglove.woff2') format('woff2'),
+         url('fonts/handglove.woff') format('woff');
+    font-family: 'Alegreya Sans';
+         src: url('fonts/alegreya-sans.woff2') format('woff2'),
+              url('fonts/alegreya-sans.woff') format('woff');
+}
 body {
-    font-family: "Roboto Mono", monospace, "Exo 2", 'Arial', sans-serif;
+    font-family:  'Alegreya Sans', handglove, "Roboto Mono", monospace, "Exo 2", 'Arial', sans-serif;
     margin: 0;
     background-color: #f9f9f9;
     color: #333;
@@ -105,10 +112,10 @@ nav ul a:hover {
 }
 
 section {
-    margin: 50px 20px;
+    margin: 50px 10px;
     background: white;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px 50px;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
 }
 
@@ -129,6 +136,22 @@ input, textarea {
     font-size: 1em;
 }
 
+#about-skills-container {
+    display: flex;
+
+  }
+
+#about {
+    width: 80%; /* Adjust the width as needed */
+    margin-right: 20px; 
+
+  }
+  
+ #skills {
+    width: 20%; /* Adjust the width as needed */
+    margin-left: 20px;
+  }
+
 button {
     padding: 10px;
     color: white;
@@ -144,6 +167,8 @@ button:hover {
     background-color: #0d2356; /* Chase dark blue color */
 }
 .skills-icons {
+    display: flex;
+    flex-wrap: wrap; /* Add flex-wrap property */
     justify-content: space-around;
 }
 
@@ -151,6 +176,8 @@ button:hover {
     list-style-type: none;
     padding: 0;
     display: flex;
+    flex-wrap: wrap; /* Add flex-wrap property */
+
 }
 
 .skills-icons li {
@@ -244,14 +271,18 @@ footer ul {
     }
     @media screen and (max-width: 1553px) {
         .header-text {
-          position: relative;
-          z-index: 2;
-          color: white; /* Optional: Change text color for better visibility */
+            position: absolute;
+            top: 50%;  /* Adjust as needed */
+            left: 50%;  /* Adjust as needed */
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            color: white; /* Optional: Change text color for better visibility */
         }
-      
         #profile-pic {
-          position: relative;
-          z-index: 1;
+            z-index: 1; /* This will place the image above the text */
         }
-      }
+}
+}
+#contact p {
+    text-indent: 50px; /* Add indentation to the paragraph */
 }
