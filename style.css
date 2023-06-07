@@ -4,12 +4,13 @@
 body {
     font-family: "Roboto Mono", monospace, "Exo 2", 'Arial', sans-serif;
     margin: 0;
+    padding: 20px; /* adjust this as necessary */
     background-color: #f9f9f9;
     color: #333;
+    box-sizing: border-box;
 }
 
 header {
-    position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -46,7 +47,7 @@ header img {
     left: 0px;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: left center;
     opacity: 1;
     transition: opacity 500ms ease 0s;
 }
@@ -89,7 +90,7 @@ nav ul li {
 }
 
 nav ul li:last-child {
-    margin-right: 20px; /* Adjust as necessary for your preferred spacing */
+    margin-right: 40px; /* Adjust as necessary for your preferred spacing */
 }
 
 nav ul a {
