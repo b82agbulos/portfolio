@@ -44,6 +44,18 @@ header {
     overflow: hidden;
 }
 
+.attributes-title {
+    text-align: center;
+    margin-left: 0;
+    position: static;
+    width: 100%;
+}
+.attributes-header {
+    display: block !important;
+}
+.attributes-header {
+    height: 17vh; /* adjust this value as needed */
+}
 .header-text {
     width: 66.67%;
     text-align: left;
