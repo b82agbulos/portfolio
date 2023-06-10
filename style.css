@@ -276,23 +276,91 @@ footer ul {
     #profile-pic {
         opacity: 0.5;
     }
-    
 }
+
 @media screen and (max-width: 660px) {
     .header-text {
         text-align: center;
         width: 100%; /* ensure the container takes full width */
         margin: 0; /* remove any margin that might be pushing it off the screen */
         padding: 20px; /* add some padding around the text */
-
     }  
+
     .header-text p, .header-text h1, .header-text h3 {
         margin: 0; /* reset the margin */
         padding: 10px 0; /* add some vertical padding */
         line-height: 1.4; /* adjust line-height as necessary */
     }
-        #profile-pic {
-            display: none; /* hides the header image */
-        }
-       
-        }
+
+
+
+    header img {
+        max-width: 100%; /* ensure the image does not overflow the container */
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    #about-skills-container {
+        flex-direction: column; /* stack the containers vertically */
+    }
+
+    #about, #skills {
+        width: 100%; /* each container takes full width */
+        margin: 0; /* reset the margin */
+    }
+
+    .project-container {
+        flex-direction: column;
+    }
+    
+    .project {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1, h2 {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    nav ul {
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    section {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    #about-skills-container {
+        flex-direction: column;
+    }
+
+    #about, #skills {
+        width: 100%;
+        margin: 0;
+    }
+
+    .project-container {
+        flex-direction: column;
+    }
+    
+    .project {
+        flex: none;
+        width: 100%;
+    }
+
+    footer ul {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+}
+
