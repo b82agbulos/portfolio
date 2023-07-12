@@ -151,13 +151,13 @@ textarea {
 }
 
 #about-skills-container {
-    margin: 0;
-    padding: 0;
+    margin: 20px;
     display: flex;
     background: none;
     border: none;
     box-shadow: none;
     margin-bottom: 5px;
+    
 }
 
 #about {
@@ -327,17 +327,7 @@ footer ul {
         /* adjust line-height as necessary */
     }
 
-
-
-    header img {
-        max-width: 100%;
-        /* ensure the image does not overflow the container */
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
+ 
     #about-skills-container {
         flex-direction: column;
         /* stack the containers vertically */
