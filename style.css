@@ -3,17 +3,17 @@
 @font-face {
     font-family: 'Handglove';
     src: url('fonts/handglove.woff2') format('woff2'),
-         url('fonts/handglove.woff') format('woff');
+        url('fonts/handglove.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Alegreya Sans';
     src: url('fonts/alegreya-sans.woff2') format('woff2'),
-         url('fonts/alegreya-sans.woff') format('woff');
+        url('fonts/alegreya-sans.woff') format('woff');
 }
 
 body {
-    font-family:  'Alegreya Sans', 'handglove', "Roboto Mono", monospace, "Exo 2", 'Arial', sans-serif;
+    font-family: 'Alegreya Sans', 'handglove', "Roboto Mono", monospace, "Exo 2", 'Arial', sans-serif;
     margin: 0;
     background-color: #f9f9f9;
     color: #333;
@@ -50,21 +50,27 @@ header {
     position: static;
     width: 100%;
 }
+
 .attributes-header {
     display: block !important;
 }
+
 .attributes-header {
-    height: 17vh; /* adjust this value as needed */
+    height: 17vh;
+    /* adjust this value as needed */
 }
+
 .header-text {
     width: 66.67%;
     text-align: left;
     margin-right: 500px;
 }
 
-header p, header h1, header h3 {
+header p,
+header h1,
+header h3 {
     margin-left: 66.67%;
-    text-align: left;  
+    text-align: left;
     z-index: 1;
     position: relative;
     margin-bottom: 10px;
@@ -85,7 +91,7 @@ nav {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 999;  
+    z-index: 999;
     background-color: #0d2356;
 }
 
@@ -135,7 +141,8 @@ section a:hover {
     color: #0d2356;
 }
 
-input, textarea {
+input,
+textarea {
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
@@ -155,17 +162,18 @@ input, textarea {
 
 #about {
     width: 80%;
-    margin-right: 20px; 
+    margin-right: 20px;
 }
 
 #skills {
     width: 20%;
     margin-left: 20px;
-    border: none;  
+    border: none;
 }
 
 #contact p {
-    text-indent: 20px; /* Adjust the indentation value as needed */
+    text-indent: 20px;
+    /* Adjust the indentation value as needed */
 }
 
 button {
@@ -268,7 +276,8 @@ footer ul {
 .song-info span:not(:last-child) {
     display: inline-block;
     margin-left: 20px;
-  }
+}
+
 .song-info img {
     display: block;
     width: 100px;
@@ -276,13 +285,13 @@ footer ul {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 20px;
-  }
-  
-  .song-info button {
+}
+
+.song-info button {
     display: block;
     margin-top: 10px;
     margin-left: 20px;
-  }
+}
 
 @media screen and (max-width: 1475px) {
     #profile-pic {
@@ -291,23 +300,38 @@ footer ul {
 }
 
 @media screen and (max-width: 660px) {
+    @media screen and (max-width: 660px) {
+        header img {
+            display: none;
+        }
+    }
+
     .header-text {
         text-align: center;
-        width: 100%; /* ensure the container takes full width */
-        margin: 0; /* remove any margin that might be pushing it off the screen */
-        padding: 20px; /* add some padding around the text */
-    }  
+        width: 100%;
+        /* ensure the container takes full width */
+        margin: 0;
+        /* remove any margin that might be pushing it off the screen */
+        padding: 20px;
+        /* add some padding around the text */
+    }
 
-    .header-text p, .header-text h1, .header-text h3 {
-        margin: 0; /* reset the margin */
-        padding: 10px 0; /* add some vertical padding */
-        line-height: 1.4; /* adjust line-height as necessary */
+    .header-text p,
+    .header-text h1,
+    .header-text h3 {
+        margin: 0;
+        /* reset the margin */
+        padding: 10px 0;
+        /* add some vertical padding */
+        line-height: 1.4;
+        /* adjust line-height as necessary */
     }
 
 
 
     header img {
-        max-width: 100%; /* ensure the image does not overflow the container */
+        max-width: 100%;
+        /* ensure the image does not overflow the container */
     }
 
     nav ul {
@@ -315,18 +339,22 @@ footer ul {
     }
 
     #about-skills-container {
-        flex-direction: column; /* stack the containers vertically */
+        flex-direction: column;
+        /* stack the containers vertically */
     }
 
-    #about, #skills {
-        width: 100%; /* each container takes full width */
-        margin: 0; /* reset the margin */
+    #about,
+    #skills {
+        width: 100%;
+        /* each container takes full width */
+        margin: 0;
+        /* reset the margin */
     }
 
     .project-container {
         flex-direction: column;
     }
-    
+
     .project {
         flex: none;
         width: 100%;
@@ -334,7 +362,9 @@ footer ul {
 }
 
 @media only screen and (max-width: 600px) {
-    h1, h2 {
+
+    h1,
+    h2 {
         font-size: 1.2em;
         text-align: center;
     }
@@ -356,7 +386,8 @@ footer ul {
         flex-direction: column;
     }
 
-    #about, #skills {
+    #about,
+    #skills {
         width: 100%;
         margin: 0;
     }
@@ -364,7 +395,7 @@ footer ul {
     .project-container {
         flex-direction: column;
     }
-    
+
     .project {
         flex: none;
         width: 100%;
@@ -375,4 +406,3 @@ footer ul {
         margin-bottom: 10px;
     }
 }
-
